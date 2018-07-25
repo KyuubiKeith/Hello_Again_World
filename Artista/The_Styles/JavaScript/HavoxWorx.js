@@ -51,7 +51,7 @@ function preLoader(){
 }
 
 /* Call preLoader */
-var t = 1000;/* Time */
+var t = 200;/* Time */
 preLoader();
 
 });

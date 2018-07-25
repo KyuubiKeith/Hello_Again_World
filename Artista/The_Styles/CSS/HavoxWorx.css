@@ -34,6 +34,24 @@
             height: 150px;
     } 
 }
+@media only screen and (max-width: 400px) {
+    .logo {
+           width: 350px;
+           height: 150px;
+   } 
+}
+@media only screen and (max-width: 350px) {
+    .logo {
+           width: 300px;
+           height: 150px;
+   } 
+}
+@media only screen and (max-width: 300px) {
+    .logo {
+           width: 280px;
+           height: 150px;
+   } 
+}
 
 
 /* -----------------------------------------------------------------
@@ -45,7 +63,7 @@
     height:100%;
     min-width: 320px;
     min-height: 480px;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 /* -----------------------------------------------------------------
@@ -64,8 +82,6 @@
     font-family: "Overlock", sans-serif;
     font-weight: 200;
     line-height: 2;
-    overflow-x: hidden;
-    -ms-overflow-style: scrollbar;
     -webkit-font-smoothing: antialiased;
  }
 
@@ -88,14 +104,14 @@
     /* -----------------------------------------------------------------
     - Sections
     ----------------------------------------------------------------- */
-    .home {
+    .content {
         display: block;
         position: relative;
         background-color: #fff;
         z-index: 2;
     }
     
-    .home table {
+    .content table {
 	    position: relative;
 	    text-align: center;
 	    padding-bottom: 100px;
@@ -103,7 +119,7 @@
     }
 
     /* Content Display Area*/
-    .home p{
+    .content p{
         position: relative;
         font-family: 'englebert', sans-serif;
 	    font-weight: 300;
@@ -115,32 +131,63 @@
     }
 
     @media only screen and (max-width: 800px) {
-        .home p{
+        .content p{
             color: black;
             width: 500px;      
         }
     }
     
      @media only screen and (max-width: 580px) {
-        .home p{
+        .content p{
             color: black;
-            width: 200px;      
+            width: 400px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        .content p{
+            color: black;
+            width: 300px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 350px) {
+        .content p{
+            color: black;
+            width: 280px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 300px) {
+        .content p{       
+            overflow: scrollable;     
+            color: black;
+            width: 220px;   
+            font-size: 16px;   
         }
     }
     /*------------------------------------------------------------------------------*/
 
-    .home .menu {
+    .content .menu {
         position: absolute;
         bottom: -100px;
-        left: 0;
         width: 100%;
-        height: 99px;
         border-top: 1px solid #ededed;
         z-index: 100;
         background-color: #fff;
     }
+    @media only screen and (max-width: 800px) {
+        .content .menu {
+            position: absolute;
+        }
+    }
+    @media only screen and (max-width: 580px) {
+        .content .menu {
+            position: absolute;
+        }
+    }
 
-    .home .menu ul {
+    .content .menu ul {
         display: block;
         width: 640px;
         margin: 36px auto 0;
@@ -148,30 +195,51 @@
         font-size: 20px;
     }
     @media only screen and (max-width: 800px) {
-        .home .menu ul {
-            display: block;
+        .content .menu ul {
             width: 400px;
+            font-size: 18px;
         }  
     }
     @media only screen and (max-width: 580px) {
-        .home .menu ul {
+        .content .menu ul {
+            width: 400px;
+            font-size: 16px;
+        }  
+    }
+    @media only screen and (max-width: 400px) {
+        .content .menu ul {
+            width: 380px;
+            font-size: 16px;
             display: block;
-            width: 300px;
+        }  
+    }
+    @media only screen and (max-width: 350px) {
+        .content .menu ul {
+            width: 320px;
+            font-size: 16px;
+            display: block;
+        }  
+    }
+    @media only screen and (max-width: 300px) {
+        .content .menu ul {
+            width: 280px;
+            font-size: 16px;
+            display: block;
         }  
     }
 
-    .home .menu li {
+    .content .menu li {
         display: inline-block;
     }
 
-    .home .menu a {
+
+    .content .menu a {
         display: block;
         /*font-family: 'Lato', sans-serif;*/
-        font-weight: 300;
         color: #212121;
         padding: 6px;
     }
 
-    .home .menu a:hover {
+    .content .menu a:hover {
         color: #d2d2d2;
     }
