@@ -16,9 +16,12 @@
 /* -----------------------------------------------------------------
     - Logo
 ----------------------------------------------------------------- */
-.logo {
+div.logo {
 	width: 500px;
-	height: 300px;
+    height: 300px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-image: url("../../The_Elements/Images/SVG/wechat.svg")
 }
 
 @media only screen and (max-width: 800px) {
@@ -93,7 +96,7 @@
 
  @media only screen and (max-width: 580px) {
     body {
-        background-color: #111111;
+        background-color: white#111111;
         background-image: none; }
      }
      
@@ -107,7 +110,7 @@
     .content {
         display: block;
         position: relative;
-        background-color: #fff;
+        background-color: black;
         z-index: 2;
     }
     
@@ -124,7 +127,7 @@
         font-family: 'englebert', sans-serif;
 	    font-weight: 300;
 	    font-size: 18px;
-	    color: black;
+	    color: white;
 	    width: 800px;
 	    padding: 10px;
 	    margin: 0 auto;
@@ -132,28 +135,28 @@
 
     @media only screen and (max-width: 800px) {
         .content p{
-            color: black;
+            color: white;
             width: 500px;      
         }
     }
     
      @media only screen and (max-width: 580px) {
         .content p{
-            color: black;
+            color: white;
             width: 400px;   
             font-size: 16px;   
         }
     }
     @media only screen and (max-width: 400px) {
         .content p{
-            color: black;
+            color: white;
             width: 300px;   
             font-size: 16px;   
         }
     }
     @media only screen and (max-width: 350px) {
         .content p{
-            color: black;
+            color: white;
             width: 280px;   
             font-size: 16px;   
         }
@@ -161,7 +164,7 @@
     @media only screen and (max-width: 300px) {
         .content p{       
             overflow: scrollable;     
-            color: black;
+            color: white;
             width: 220px;   
             font-size: 16px;   
         }
@@ -174,7 +177,7 @@
         width: 100%;
         border-top: 1px solid #ededed;
         z-index: 100;
-        background-color: #fff;
+        background-color: black;
     }
     @media only screen and (max-width: 800px) {
         .content .menu {
@@ -236,7 +239,7 @@
     .content .menu a {
         display: block;
         /*font-family: 'Lato', sans-serif;*/
-        color: #212121;
+        color: white;
         padding: 6px;
     }
 
