@@ -4,69 +4,135 @@
 */
 
 /* ------------------------------------------------
+
+- PreLoader
 - Logo
 - General
 - Typography
 - Sections
+- Contact
 ------------------------------------------------ */
 
 @import url(Artista/The_Styles/CSS/HavoxWorx.css);
 @import url(../fonts/font-awesome-4.7.0/css/font-awesome.min.css);
 
 /* -----------------------------------------------------------------
+    - Preloader
+----------------------------------------------------------------- */
+.preLoader {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-color: black;
+    color: white;
+	text-align: center;
+	z-index: 200;
+}
+
+.preLoader span {
+	opacity: 0;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+/* -----------------------------------------------------------------
     - Logo
 ----------------------------------------------------------------- */
 div.logo {
-	width: 500px;
+    width: 500px;
     height: 300px;
+    margin-left: auto; 
+    margin-right: auto;
     -webkit-filter: invert(100%);
     filter: invert(100%);
-    background-image: url("../../The_Elements/Images/SVG/wechat.svg")
+    background-image: url("../../The_Elements/Images/SVG/Code.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 @media only screen and (max-width: 800px) {
-    .logo {
+    div.logo {
              width: 400px;
             height: 200px;
+            margin-left: auto; 
+            margin-right: auto;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            background-image: url("../../The_Elements/Images/SVG/Desktop.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
         }        
     }
             
 @media only screen and (max-width: 580px) {
-     .logo {
+    div.logo {
             width: 350px;
             height: 150px;
+            margin-left: auto; 
+            margin-right: auto;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            background-image: url("../../The_Elements/Images/SVG/Skull.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
     } 
 }
 @media only screen and (max-width: 400px) {
-    .logo {
-           width: 350px;
-           height: 150px;
+    div.logo {
+           width: 150px;
+           height: 200px;
+           margin-left: auto; 
+           margin-right: auto;
+           -webkit-filter: invert(100%);
+           filter: invert(100%);
+           background-image: url("../../The_Elements/Images/SVG/Handset.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
    } 
 }
 @media only screen and (max-width: 350px) {
-    .logo {
-           width: 300px;
-           height: 150px;
+    div.logo {
+           width: 200px;
+           height: 100px;
+           margin-left: auto; 
+           margin-right: auto;
+           -webkit-filter: invert(100%);
+           filter: invert(100%);
+           background-image: url("../../The_Elements/Images/SVG/Handset.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
    } 
 }
 @media only screen and (max-width: 300px) {
-    .logo {
-           width: 280px;
-           height: 150px;
+    div.logo {
+           width: 150px;
+           height: 70px;
+           margin-left: auto; 
+           margin-right: auto;
+           -webkit-filter: invert(100%);
+           filter: invert(100%);
+           background-image: url("../../The_Elements/Images/SVG/TerminalNode.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
    } 
 }
-
 
 /* -----------------------------------------------------------------
     - General
 ----------------------------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+}
 
 .fillScreen {
     width:100%;
     height:100%;
     min-width: 320px;
     min-height: 480px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 /* -----------------------------------------------------------------
@@ -235,7 +301,6 @@ div.logo {
         display: inline-block;
     }
 
-
     .content .menu a {
         display: block;
         /*font-family: 'Lato', sans-serif;*/
@@ -244,5 +309,185 @@ div.logo {
     }
 
     .content .menu a:hover {
-        color: #d2d2d2;
+        color: greenyellow;
     }
+
+/* -----------------------------------------------------------------
+    - Contact
+--------------------------------------------------------------------*/
+.contact a {
+	color: white;
+}
+
+.contact a:hover {
+	color: greenyellow;
+}
+
+/* social */
+.pin-btn span {
+	width: 40px !important;
+	height: 20px !important;
+	margin: 0 !important;
+}
+
+.contact.outer{
+	position: absolute;
+	top: -302px;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	border-bottom: 1px solid #dcdcdc;
+	background-color: black;
+	z-index: 200;
+}
+
+.contact.inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	/*background-color: #faf;*/
+}
+
+.contact.inner #map-canvas{
+	width: 66%;
+	height: 100%;
+	background-color:black;
+}
+
+@media (max-width: 749px) {
+
+    .contact.inner #map-canvas{
+        width: 0;
+        background-color: black;
+    }
+
+    .contact.inner #contactInfo{
+		width: 100%;
+	}
+
+}
+
+
+
+.contact.inner #contactInfo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30%;
+	height: 100%;
+	
+	/*font-family: 'Lato', sans-serif;*/
+	font-weight: 300;
+	font-size: 14px;
+	color: white;
+}
+@media (max-width: 800px) {
+
+    .contact.inner #contactInfo
+    {
+		width: 100%;
+	}
+
+}
+
+.contact.inner #contactInfo img {
+    display: block;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.contact.inner #contactInfo span {
+	display: block;
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	opacity: 0;
+	
+	-webkit-transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+	-moz-transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+	transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+}
+
+
+.contact.inner #contactInfo span.info2 {
+	-webkit-transition-delay: .1s;
+    -moz-transition-delay: .1s;
+	transition-delay: .1s;
+}
+
+.contact.inner #contactInfo span.info3 {
+	-webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+	transition-delay: .2s;
+}
+
+.contact.inner #contactInfo span.info4 {
+	-webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.contact.inner #contactInfo span.info5 {
+	-webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+	transition-delay: .4s;
+}
+
+.contact.inner #contactInfo span.info1.loaded {
+	opacity: 1;
+	bottom: 225px;
+}
+
+.contact.inner #contactInfo span.info2.loaded {
+	opacity: 1;
+	bottom: 195px;
+}
+
+.contact.inner #contactInfo span.info3.loaded {
+	opacity: 1;
+	bottom: 135px;
+}
+
+.contact.inner #contactInfo span.info4.loaded {
+	opacity: 1;
+	bottom: 105px;
+}
+
+.contact.inner #contactInfo span.info5.loaded {
+	opacity: 1;
+	bottom: 75px;
+}
+
+
+.contact.inner #contactInfo_close {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 44px;
+	height: 44px;
+	margin-top: -22px;
+}
+
+.contact.inner #contactInfo_close img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-transition: -webkit-transform .6s ease-in-out;
+	-moz-transition: -moz-transform .6s ease-in-out;
+	transition: transform .6s ease-in-out;
+}
+
+.contact.inner #contactInfo_close:hover img {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+	
+	-webkit-transition: -webkit-transform .6s ease-in-out;
+	-moz-transition: -moz-transform .6s ease-in-out;
+	transition: transform .6s ease-in-out;
+}
