@@ -41,83 +41,77 @@
     - Logo
 ----------------------------------------------------------------- */
 div.logo {
-    width: 500px;
-    height: 300px;
+    width: 50%;
+    height: 30%;
     margin-left: auto; 
     margin-right: auto;
     -webkit-filter: invert(100%);
     filter: invert(100%);
-    background-image: url("../../The_Elements/Images/SVG/Code.svg");
+    background-image: url("../../The_Elements/Images/SVG/Desktop.svg");
     background-repeat: no-repeat;
     background-position: 50%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1300px) {
     div.logo {
-             width: 400px;
-            height: 200px;
+             width: 50%;
+            height: 30%;
             margin-left: auto; 
             margin-right: auto;
             -webkit-filter: invert(100%);
             filter: invert(100%);
-            background-image: url("../../The_Elements/Images/SVG/Desktop.svg");
+            background-image: url("../../The_Elements/Images/SVG/NotebookLaptop.svg");
             background-repeat: no-repeat;
             background-position: 50%;
         }        
-    }
-            
-@media only screen and (max-width: 580px) {
-    div.logo {
-            width: 350px;
-            height: 150px;
-            margin-left: auto; 
-            margin-right: auto;
-            -webkit-filter: invert(100%);
-            filter: invert(100%);
-            background-image: url("../../The_Elements/Images/SVG/Skull.svg");
-            background-repeat: no-repeat;
-            background-position: 50%;
-    } 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     div.logo {
-           width: 150px;
-           height: 200px;
+        width: 50%;
+        height: 30%;
            margin-left: auto; 
            margin-right: auto;
            -webkit-filter: invert(100%);
            filter: invert(100%);
-           background-image: url("../../The_Elements/Images/SVG/Handset.svg");
+           background-image: url("../../The_Elements/Images/SVG/tablet.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
+   } 
+}
+@media only screen and (max-width: 450px) {
+    div.logo {
+        width: 100%;
+        height: 30%;
+           margin-left: auto; 
+           margin-right: auto;
+           background-image: url("../../The_Elements/Images/SVG/DarkHandset.svg");
            background-repeat: no-repeat;
            background-position: 50%;
    } 
 }
 @media only screen and (max-width: 350px) {
     div.logo {
-           width: 200px;
-           height: 100px;
+            width: 50%;
+            height: 30%;
            margin-left: auto; 
            margin-right: auto;
-           -webkit-filter: invert(100%);
-           filter: invert(100%);
-           background-image: url("../../The_Elements/Images/SVG/Handset.svg");
+           background-image: url("../../The_Elements/Images/SVG/Chats.svg");
            background-repeat: no-repeat;
            background-position: 50%;
    } 
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 250px) {
     div.logo {
-           width: 150px;
-           height: 70px;
+            width: 50%;
+            height: 50%;
            margin-left: auto; 
            margin-right: auto;
-           -webkit-filter: invert(100%);
-           filter: invert(100%);
-           background-image: url("../../The_Elements/Images/SVG/TerminalNode.svg");
+           background-image: url("../../The_Elements/Images/SVG/Chats.svg");
            background-repeat: no-repeat;
            background-position: 50%;
    } 
 }
+
 
 /* -----------------------------------------------------------------
     - General
