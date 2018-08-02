@@ -4,41 +4,122 @@
 */
 
 /* ------------------------------------------------
+
+- PreLoader
 - Logo
 - General
 - Typography
 - Sections
+- Contact
 ------------------------------------------------ */
 
 @import url(Artista/The_Styles/CSS/HavoxWorx.css);
 @import url(../fonts/font-awesome-4.7.0/css/font-awesome.min.css);
 
 /* -----------------------------------------------------------------
-    - Logo
+    - Preloader
 ----------------------------------------------------------------- */
-.logo {
-	width: 500px;
-	height: 300px;
+.preLoader {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-color: black;
+    color: white;
+	text-align: center;
+	z-index: 200;
 }
 
-@media only screen and (max-width: 800px) {
-    .logo {
-             width: 400px;
-            height: 200px;
+.preLoader span {
+	opacity: 0;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+/* -----------------------------------------------------------------
+    - Logo
+----------------------------------------------------------------- */
+div.logo {
+    width: 50%;
+    height: 30%;
+    margin-left: auto; 
+    margin-right: auto;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-image: url("../../The_Elements/Images/SVG/Desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+@media only screen and (max-width: 1300px) {
+    div.logo {
+             width: 50%;
+            height: 30%;
+            margin-left: auto; 
+            margin-right: auto;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            background-image: url("../../The_Elements/Images/SVG/NotebookLaptop.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
         }        
-    }
-            
-@media only screen and (max-width: 580px) {
-     .logo {
-            width: 350px;
-            height: 150px;
-    } 
+}
+@media only screen and (max-width: 700px) {
+    div.logo {
+        width: 50%;
+        height: 30%;
+           margin-left: auto; 
+           margin-right: auto;
+           -webkit-filter: invert(100%);
+           filter: invert(100%);
+           background-image: url("../../The_Elements/Images/SVG/tablet.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
+   } 
+}
+@media only screen and (max-width: 450px) {
+    div.logo {
+        width: 100%;
+        height: 30%;
+           margin-left: auto; 
+           margin-right: auto;
+           background-image: url("../../The_Elements/Images/SVG/DarkHandset.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
+   } 
+}
+@media only screen and (max-width: 350px) {
+    div.logo {
+            width: 50%;
+            height: 30%;
+           margin-left: auto; 
+           margin-right: auto;
+           background-image: url("../../The_Elements/Images/SVG/Chats.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
+   } 
+}
+@media only screen and (max-width: 250px) {
+    div.logo {
+            width: 50%;
+            height: 50%;
+           margin-left: auto; 
+           margin-right: auto;
+           background-image: url("../../The_Elements/Images/SVG/Chats.svg");
+           background-repeat: no-repeat;
+           background-position: 50%;
+   } 
 }
 
 
 /* -----------------------------------------------------------------
     - General
 ----------------------------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+}
 
 .fillScreen {
     width:100%;
@@ -64,8 +145,6 @@
     font-family: "Overlock", sans-serif;
     font-weight: 200;
     line-height: 2;
-    overflow-x: hidden;
-    -ms-overflow-style: scrollbar;
     -webkit-font-smoothing: antialiased;
  }
 
@@ -77,7 +156,7 @@
 
  @media only screen and (max-width: 580px) {
     body {
-        background-color: #111111;
+        background-color: white#111111;
         background-image: none; }
      }
      
@@ -88,14 +167,14 @@
     /* -----------------------------------------------------------------
     - Sections
     ----------------------------------------------------------------- */
-    .home {
+    .content {
         display: block;
         position: relative;
-        background-color: #fff;
+        background-color: black;
         z-index: 2;
     }
     
-    .home table {
+    .content table {
 	    position: relative;
 	    text-align: center;
 	    padding-bottom: 100px;
@@ -103,44 +182,75 @@
     }
 
     /* Content Display Area*/
-    .home p{
+    .content p{
         position: relative;
         font-family: 'englebert', sans-serif;
 	    font-weight: 300;
 	    font-size: 18px;
-	    color: black;
+	    color: white;
 	    width: 800px;
 	    padding: 10px;
 	    margin: 0 auto;
     }
 
     @media only screen and (max-width: 800px) {
-        .home p{
-            color: black;
+        .content p{
+            color: white;
             width: 500px;      
         }
     }
     
      @media only screen and (max-width: 580px) {
-        .home p{
-            color: black;
-            width: 200px;      
+        .content p{
+            color: white;
+            width: 400px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        .content p{
+            color: white;
+            width: 300px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 350px) {
+        .content p{
+            color: white;
+            width: 280px;   
+            font-size: 16px;   
+        }
+    }
+    @media only screen and (max-width: 300px) {
+        .content p{       
+            overflow: scrollable;     
+            color: white;
+            width: 220px;   
+            font-size: 16px;   
         }
     }
     /*------------------------------------------------------------------------------*/
 
-    .home .menu {
+    .content .menu {
         position: absolute;
         bottom: -100px;
-        left: 0;
         width: 100%;
-        height: 99px;
         border-top: 1px solid #ededed;
         z-index: 100;
-        background-color: #fff;
+        background-color: black;
+    }
+    @media only screen and (max-width: 800px) {
+        .content .menu {
+            position: absolute;
+        }
+    }
+    @media only screen and (max-width: 580px) {
+        .content .menu {
+            position: absolute;
+        }
     }
 
-    .home .menu ul {
+    .content .menu ul {
         display: block;
         width: 640px;
         margin: 36px auto 0;
@@ -148,30 +258,230 @@
         font-size: 20px;
     }
     @media only screen and (max-width: 800px) {
-        .home .menu ul {
-            display: block;
+        .content .menu ul {
             width: 400px;
+            font-size: 18px;
         }  
     }
     @media only screen and (max-width: 580px) {
-        .home .menu ul {
+        .content .menu ul {
+            width: 400px;
+            font-size: 16px;
+        }  
+    }
+    @media only screen and (max-width: 400px) {
+        .content .menu ul {
+            width: 380px;
+            font-size: 16px;
             display: block;
-            width: 300px;
+        }  
+    }
+    @media only screen and (max-width: 350px) {
+        .content .menu ul {
+            width: 320px;
+            font-size: 16px;
+            display: block;
+        }  
+    }
+    @media only screen and (max-width: 300px) {
+        .content .menu ul {
+            width: 280px;
+            font-size: 16px;
+            display: block;
         }  
     }
 
-    .home .menu li {
+    .content .menu li {
         display: inline-block;
     }
 
-    .home .menu a {
+    .content .menu a {
         display: block;
         /*font-family: 'Lato', sans-serif;*/
-        font-weight: 300;
-        color: #212121;
+        color: white;
         padding: 6px;
     }
 
-    .home .menu a:hover {
-        color: #d2d2d2;
+    .content .menu a:hover {
+        color: greenyellow;
     }
+
+/* -----------------------------------------------------------------
+    - Contact
+--------------------------------------------------------------------*/
+.contact a {
+	color: white;
+}
+
+.contact a:hover {
+	color: greenyellow;
+}
+
+/* social */
+.pin-btn span {
+	width: 40px !important;
+	height: 20px !important;
+	margin: 0 !important;
+}
+
+.contact.outer{
+	position: absolute;
+	top: -302px;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	border-bottom: 1px solid #dcdcdc;
+	background-color: black;
+	z-index: 200;
+}
+
+.contact.inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	/*background-color: #faf;*/
+}
+
+.contact.inner #map-canvas{
+	width: 66%;
+	height: 100%;
+	background-color:black;
+}
+
+@media (max-width: 749px) {
+
+    .contact.inner #map-canvas{
+        width: 0;
+        background-color: black;
+    }
+
+    .contact.inner #contactInfo{
+		width: 100%;
+	}
+
+}
+
+
+
+.contact.inner #contactInfo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30%;
+	height: 100%;
+	
+	/*font-family: 'Lato', sans-serif;*/
+	font-weight: 300;
+	font-size: 14px;
+	color: white;
+}
+@media (max-width: 800px) {
+
+    .contact.inner #contactInfo
+    {
+		width: 100%;
+	}
+
+}
+
+.contact.inner #contactInfo img {
+    display: block;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.contact.inner #contactInfo span {
+	display: block;
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	opacity: 0;
+	
+	-webkit-transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+	-moz-transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+	transition: bottom .6s ease-in-out, opacity .6s ease-in-out;
+}
+
+
+.contact.inner #contactInfo span.info2 {
+	-webkit-transition-delay: .1s;
+    -moz-transition-delay: .1s;
+	transition-delay: .1s;
+}
+
+.contact.inner #contactInfo span.info3 {
+	-webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+	transition-delay: .2s;
+}
+
+.contact.inner #contactInfo span.info4 {
+	-webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.contact.inner #contactInfo span.info5 {
+	-webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+	transition-delay: .4s;
+}
+
+.contact.inner #contactInfo span.info1.loaded {
+	opacity: 1;
+	bottom: 225px;
+}
+
+.contact.inner #contactInfo span.info2.loaded {
+	opacity: 1;
+	bottom: 195px;
+}
+
+.contact.inner #contactInfo span.info3.loaded {
+	opacity: 1;
+	bottom: 135px;
+}
+
+.contact.inner #contactInfo span.info4.loaded {
+	opacity: 1;
+	bottom: 105px;
+}
+
+.contact.inner #contactInfo span.info5.loaded {
+	opacity: 1;
+	bottom: 75px;
+}
+
+
+.contact.inner #contactInfo_close {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 44px;
+	height: 44px;
+	margin-top: -22px;
+}
+
+.contact.inner #contactInfo_close img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-transition: -webkit-transform .6s ease-in-out;
+	-moz-transition: -moz-transform .6s ease-in-out;
+	transition: transform .6s ease-in-out;
+}
+
+.contact.inner #contactInfo_close:hover img {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+	
+	-webkit-transition: -webkit-transform .6s ease-in-out;
+	-moz-transition: -moz-transform .6s ease-in-out;
+	transition: transform .6s ease-in-out;
+}
